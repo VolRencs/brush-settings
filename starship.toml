@@ -1,0 +1,16 @@
+# ~/.config/starship.toml
+
+[directory]
+truncation_length = 4
+style = "bold cyan"
+
+[git_branch]
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+
+[time]
+disabled = false
+format = "[$time](bold yellow) "
+time_format = "%H:%M"
