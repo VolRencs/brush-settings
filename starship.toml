@@ -1,11 +1,7 @@
-format = """
-$directory $git_branch$git_status $time$character
-"""
-
 [character]
 disabled = false
-success_symbol = '[](bright-yellow bold)'
-error_symbol = '[](bright-red bold)'
+success_symbol = '[ ](bright-yellow bold)'
+error_symbol = '[ ](bright-red bold)'
 
 [directory]
 truncation_length = 2
@@ -19,6 +15,5 @@ style = "bright-red bold italic"
 
 [time]
 disabled = false
-format = "[$time ]($style)"
+format = "[$time ](bright-yellow bold)"
 time_format = "%R"
-style = "bright-yellow bold"
