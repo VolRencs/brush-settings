@@ -21,13 +21,10 @@ copy() {
 }
 
 
-alias ls='lsd -la --color=always --group-directories-first --icon=always'
-alias la='lsd -a  --color=always --group-directories-first --icon=always'
-alias ll='lsd -l  --color=always --group-directories-first --icon=always'
-alias lt='lsd -a --tree --color=always --group-directories-first --icon=always'
-alias l.='lsd -a --color=always | grep -E "^\."'
+alias ls='ls -la --color=always --group-directories-first'
+alias la='ls -a  --color=always --group-directories-first'
+alias ll='ls -l  --color=always --group-directories-first'
 
-alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update='sudo cachyos-rate-mirrors && sudo pacman -Syu'
 alias cleanup="paru -Rcs $(pacman -Qdtq)"
@@ -49,13 +46,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias hw='hwinfo --short'
-alias big="expac -H M '%m\t%n' | sort -h | nl"
-alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'
-alias apt='man pacman'
-alias apt-get='man pacman'
-alias tb='nc termbin.com 9999'
 alias jctl="journalctl -p 3 -xb"
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 eval "$(starship init bash)"
+
