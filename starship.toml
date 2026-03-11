@@ -1,16 +1,24 @@
-# ~/.config/starship.toml
+format = """
+$directory $git_branch$git_status $time$character
+"""
+
+[character]
+disabled = false
+success_symbol = '[](bright-yellow bold)'
+error_symbol = '[](bright-red bold)'
 
 [directory]
-truncation_length = 4
-style = "bold cyan"
+truncation_length = 2
+style = "bright-yellow"
 
 [git_branch]
-style = "bold purple"
+style = "bright-purple bold italic"
 
 [git_status]
-style = "bold red"
+style = "bright-red bold italic"
 
 [time]
 disabled = false
-format = "[$time](bold yellow) "
-time_format = "%H:%M"
+format = "[$time ]($style)"
+time_format = "%R"
+style = "bright-yellow bold"
